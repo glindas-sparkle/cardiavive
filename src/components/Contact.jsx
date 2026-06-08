@@ -48,7 +48,7 @@ export default function Contact() {
         </p>
 
         {/* ── Form ── */}
-        <form className="cta-form" onSubmit={handleSubmit} noValidate>
+        <form className="cta-form" data-netlify="true" onSubmit={handleSubmit} noValidate>
           <input
             className="cta-input"
             type="text"
