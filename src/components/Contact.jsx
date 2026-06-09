@@ -1,32 +1,45 @@
 import React, { useState } from 'react'
 
 // ─────────────────────────────────────────────────────────────
-//  CONTACT FORM — Edit this section freely in HTML/CSS/JS
-//
-//  To change:
-//    • Heading / copy     → edit the JSX text nodes below
-//    • Form fields        → add/remove <input> or <select> elements
-//    • Colours / spacing  → edit src/styles/main.css  (.cta-* rules)
-//    • Submit logic       → update handleSubmit()
+//  CONTACT FORM 
 // ─────────────────────────────────────────────────────────────
+
+const FORM_NAME = 'contact'
+
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&')
+}
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', org: '' })
   const [status, setStatus] = useState(null) // null | 'success' | 'error'
+  const [loading, setLoading] = useState(false)
 
   function handleChange(e) {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
 
-  async function handleSubmit(e) {
+  function handleSubmit(e) {
     e.preventDefault()
+    setLoading(true)
 
-    // ── Replace this block with your real form submission logic ──
-    // e.g. fetch('/api/contact', { method: 'POST', body: JSON.stringify(form) })
-    console.log('Form submitted:', form)
-    setStatus('success')
-    setForm({ name: '', email: '', org: '' })
-    // ─────────────────────────────────────────────────────────────
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({ 'form-name': FORM_NAME, ...form }),
+    })
+      .then(() => {
+        setStatus('success')
+        setForm({ name: '', email: '', org: '' })
+      })
+      .catch(() => {
+        setStatus('error')
+      })
+      .finally(() => {
+        setLoading(false)
+      })
   }
 
   return (
@@ -48,7 +61,15 @@ export default function Contact() {
         </p>
 
         {/* ── Form ── */}
-        <form className="cta-form" data-netlify="true" onSubmit={handleSubmit} noValidate>
+        <form
+          className="cta-form"
+          name={FORM_NAME}
+          data-netlify="true"
+          onSubmit={handleSubmit}
+        >
+          {/* Required by Netlify for JS-rendered forms */}
+          <input type="hidden" name="form-name" value={FORM_NAME} />
+
           <input
             className="cta-input"
             type="text"
@@ -75,8 +96,8 @@ export default function Contact() {
             value={form.org}
             onChange={handleChange}
           />
-          <button className="cta-submit" type="submit">
-            Request a Demo
+          <button className="cta-submit" type="submit" disabled={loading}>
+            {loading ? 'Sending…' : 'Request a Demo'}
           </button>
         </form>
 
@@ -88,7 +109,7 @@ export default function Contact() {
         )}
         {status === 'error' && (
           <p className="cta-note" style={{ color: '#ffaaaa', marginTop: '12px' }}>
-            Something went wrong. Please try again.
+            Something went wrong — please try again or email us directly.
           </p>
         )}
 
