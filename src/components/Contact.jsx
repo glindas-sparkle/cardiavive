@@ -60,7 +60,7 @@ export default function Contact() {
           simple, free, and built entirely around your patients' outcomes. Let's talk.
         </p>
         {/* ── Additional Contact Info ── */}
-        <p class="cta-sub">Jacqueline.mcgee@cardiavive.com ・ 215-610-8268
+        <p class="cta-sub cta-sub-additional">Jacqueline.mcgee@cardiavive.com ・ 215-610-8268
         </p>
         
 
