@@ -58,9 +58,9 @@ export default function Contact() {
         <p className="cta-sub">
           Whether you're a cardiologist, PCP, or hospital system — partnering with Cardiavive is
           simple, free, and built entirely around your patients' outcomes. Let's talk.
-          {/* ── Additional Contact Info ── */}
-          <p class="cta-sub" style="padding-top:10px;">Jacqueline.mcgee@cardiavive.com ・ 215-610-8268</p>
         </p>
+        {/* ── Additional Contact Info ── */}
+          <p class="cta-sub" style="padding-top:10px;">Jacqueline.mcgee@cardiavive.com ・ 215-610-8268</p>
         
 
         {/* ── Form ── */}
