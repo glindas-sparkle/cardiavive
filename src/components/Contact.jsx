@@ -60,8 +60,11 @@ export default function Contact() {
           simple, free, and built entirely around your patients' outcomes. Let's talk.
         </p>
         {/* ── Additional Contact Info ── */}
-        <p class="cta-sub cta-sub-additional">Jacqueline.mcgee@cardiavive.com ・ 215-610-8268
-        </p>
+        <ul class="cta-sub-additional">
+          <li><a href="mailto:Jacqueline.mcgee@cardiavive.com?subject=Cardiavive%20Contact">Jacqueline.mcgee@cardiavive.com</a></li>
+          <li class="dot">・</li>
+          <li><a href="tel:215-610-8268">215-610-8268</a></li>
+        </ul>
         
 
         {/* ── Form ── */}
