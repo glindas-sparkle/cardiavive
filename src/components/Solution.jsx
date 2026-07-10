@@ -51,7 +51,7 @@ export default function Solution() {
               <img
                 src={f.icon}
                 alt={f.title}
-                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', padding: 10px }}
+                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', padding: '10px' }}
               />
             </div>
             <div className="feature-title">{f.title}</div>
