@@ -3,25 +3,21 @@ import React from 'react'
 const steps = [
   {
     num: '01',
-    icon: '📋',
     title: 'Patient Referral',
     desc: 'Cardiologists, PCPs, and hospital systems refer cardiac patients to Cardiavive at discharge or between visits — no contracts, no cost to your practice.',
   },
   {
     num: '02',
-    icon: '📦',
     title: 'Device Delivery',
     desc: 'Patients receive their Cardiavive monitoring device at home at no cost. When ready, they place the device and capture their BP, heart rate, and weight.',
   },
   {
     num: '03',
-    icon: '🤖',
     title: 'AI Analysis',
     desc: 'Every reading is analyzed by our AI in real time — identifying trends, flagging concerns, and surfacing the right information to Cardiavive\'s clinical team instantly.',
   },
   {
     num: '04',
-    icon: '🩺',
     title: 'Clinical Co-Management',
     desc: 'Cardiavive\'s clinicians support medication adjustments and care decisions between visits — keeping the referring provider informed and in control at all times.',
   },
