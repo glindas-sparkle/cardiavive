@@ -35,8 +35,7 @@ export default function WhoWeServe() {
       <div className="serve-grid">
         {cards.map((c) => (
           <div className={`serve-card ${c.cls}`} key={c.title}>
-            <div className="serve-icon">{c.icon}</div>
-            <div className="serve-title">{c.title}</div>
+            <div className="serve-title"style={{ padding: '10px 0 0 0'; }}>{c.title}</div>
             <p className="serve-desc">{c.desc}</p>
             <span className="serve-tag">{c.tag}</span>
           </div>
