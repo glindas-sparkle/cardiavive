@@ -38,7 +38,6 @@ export default function HowItWorks() {
         {steps.map((step) => (
           <div className="step" key={step.num}>
             <div className="step-num">{step.num}</div>
-            <div className="step-icon">{step.icon}</div>
             <div className="step-title">{step.title}</div>
             <div className="step-desc">{step.desc}</div>
           </div>
