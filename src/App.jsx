@@ -6,6 +6,7 @@ import HowItWorks from './components/HowItWorks.jsx'
 import Solution from './components/Solution.jsx'
 import WhoWeServe from './components/WhoWeServe.jsx'
 import Founders from './components/Founders.jsx'
+import BridgeThatGap from './components/BridgeThatGap.jsx'
 import Contact from './components/Contact.jsx'
 import Footer from './components/Footer.jsx'
 
@@ -19,6 +20,7 @@ export default function App() {
       <Solution />
       <WhoWeServe />
       <Founders />
+      <BridgeThatGap />
       <Contact />
       <Footer />
     </>
