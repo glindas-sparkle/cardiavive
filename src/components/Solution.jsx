@@ -32,6 +32,12 @@ const features = [
     desc: 'Daily weight is the earliest indicator of fluid retention. Cardiavive flags concerning weight trends before they become hospitalizations — especially vital in heart failure and post-surgical patients.',
     accent: false,
   },
+  {
+    icon: '/icon-pulse-oximetry.png',
+    title: 'Pulse Oximetry Monitoring',
+    desc: 'Track oxygen saturation and pulse rate remotely for patients with COPD, heart failure, and other cardiopulmonary conditions. Ongoing monitoring helps the clinical team identify concerning changes, assess treatment effectiveness, and intervene earlier when oxygen levels begin to decline — potentially reducing the risk of an exacerbation, emergency department visit, or hospitalization.',
+    accent: false,
+  },
 ]
 
 export default function Solution() {
