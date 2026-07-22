@@ -35,7 +35,7 @@ const features = [
   {
     icon: '/icon-pulse-oximetry.png',
     title: 'Pulse Oximetry Monitoring',
-    desc: 'Track oxygen saturation and pulse rate remotely for patients with COPD, heart failure, and other cardiopulmonary conditions. Ongoing monitoring helps the clinical team identify concerning changes, assess treatment effectiveness, and intervene earlier when oxygen levels begin to decline — potentially reducing the risk of an exacerbation, emergency department visit, or hospitalization.',
+    desc: 'Track oxygen saturation and pulse rate remotely for patients with COPD, heart failure, and other cardiopulmonary conditions. Ongoing monitoring helps the clinical team identify concerning changes, assess treatment effectiveness, and intervene earlier.',
     accent: false,
   },
 ]
