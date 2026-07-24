@@ -6,7 +6,7 @@ export default function Problem() {
       <div className="problem-layout">
         <div className="problem-image-col">
           <img
-            src="/doctor-patient.png"
+            src="/doctor-patient-1.png"
             alt="Doctor consulting with patient"
             className="problem-image"
           />
