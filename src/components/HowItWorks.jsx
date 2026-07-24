@@ -26,6 +26,13 @@ const steps = [
 export default function HowItWorks() {
   return (
     <section id="how">
+      <div className="how-img-wrap">
+        <img
+          src="/the-process-img.png"
+          alt="Patient using remote monitoring device and connecting with care team via telemedicine"
+          className="how-img"
+        />
+      </div>
       <div className="how-header">
         <div className="section-label">The Process</div>
         <h2 className="section-title">How <em>Cardiavive</em> Works</h2>
